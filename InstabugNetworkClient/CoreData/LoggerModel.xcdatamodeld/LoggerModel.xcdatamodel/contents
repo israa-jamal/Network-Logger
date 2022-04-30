@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Record" representedClassName="Record" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Request"/>
+        <relationship name="response" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Response"/>
+    </entity>
+    <entity name="Request" representedClassName=".Request" syncable="YES" codeGenerationType="class">
+        <attribute name="method" attributeType="String"/>
+        <attribute name="payload" optional="YES" attributeType="String"/>
+        <attribute name="url" attributeType="String"/>
+    </entity>
+    <entity name="Response" representedClassName="Response" syncable="YES" codeGenerationType="class">
+        <attribute name="payload" optional="YES" attributeType="String"/>
+        <attribute name="statusCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="error" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResponseError"/>
+    </entity>
+    <entity name="ResponseError" representedClassName="ResponseError" syncable="YES" codeGenerationType="class">
+        <attribute name="code" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="domain" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Record" positionX="-50.462158203125" positionY="-46.46286010742188" width="128" height="74"/>
+        <element name="Request" positionX="-147.2940063476562" positionY="104.933349609375" width="128" height="88"/>
+        <element name="Response" positionX="69.8321533203125" positionY="109.7341613769531" width="128" height="74"/>
+        <element name="ResponseError" positionX="262.9534301757812" positionY="167.3613891601562" width="128" height="59"/>
+    </elements>
+</model>

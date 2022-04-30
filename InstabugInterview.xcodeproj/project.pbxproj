@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C98EAAD281D596100FC461E /* LoggerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C98EAAB281D596100FC461E /* LoggerModel.xcdatamodeld */; };
+		0C98EAAF281D599900FC461E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98EAAE281D599900FC461E /* CoreDataManager.swift */; };
+		0C98EAB1281D59B300FC461E /* NetworkLoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C98EAB0281D59B300FC461E /* NetworkLoggerManager.swift */; };
+		0CF09B6F281D8EA0008B2F4F /* InstabugModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF09B6E281D8EA0008B2F4F /* InstabugModel.swift */; };
+		0CF09B72281D8EC2008B2F4F /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF09B71281D8EC2008B2F4F /* Validator.swift */; };
+		0CF09B75281D8ED8008B2F4F /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF09B74281D8ED8008B2F4F /* ErrorExtension.swift */; };
 		24AA939F25AF0DA4007588C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA939E25AF0DA4007588C7 /* AppDelegate.swift */; };
 		24AA93A125AF0DA4007588C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA93A025AF0DA4007588C7 /* SceneDelegate.swift */; };
 		24AA93A325AF0DA4007588C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA93A225AF0DA4007588C7 /* ViewController.swift */; };
@@ -60,6 +66,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C98EAAC281D596100FC461E /* LoggerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoggerModel.xcdatamodel; sourceTree = "<group>"; };
+		0C98EAAE281D599900FC461E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0C98EAB0281D59B300FC461E /* NetworkLoggerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerManager.swift; sourceTree = "<group>"; };
+		0CF09B6E281D8EA0008B2F4F /* InstabugModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstabugModel.swift; sourceTree = "<group>"; };
+		0CF09B71281D8EC2008B2F4F /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		0CF09B74281D8ED8008B2F4F /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
 		24AA939B25AF0DA4007588C7 /* InstabugInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstabugInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AA939E25AF0DA4007588C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24AA93A025AF0DA4007588C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +116,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C98EAAA281D595200FC461E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0C98EAAE281D599900FC461E /* CoreDataManager.swift */,
+				0C98EAAB281D596100FC461E /* LoggerModel.xcdatamodeld */,
+				0C98EAB0281D59B300FC461E /* NetworkLoggerManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0CF09B6D281D8E8E008B2F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0CF09B6E281D8EA0008B2F4F /* InstabugModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0CF09B70281D8EB6008B2F4F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0CF09B71281D8EC2008B2F4F /* Validator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0CF09B73281D8EC8008B2F4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0CF09B74281D8ED8008B2F4F /* ErrorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		24AA939225AF0DA4007588C7 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +190,10 @@
 				24AA93BA25AF0F0D007588C7 /* InstabugNetworkClient.h */,
 				24AA93BB25AF0F0D007588C7 /* Info.plist */,
 				24AA93D825AF0F24007588C7 /* NetworkClient.swift */,
+				0CF09B73281D8EC8008B2F4F /* Extensions */,
+				0CF09B70281D8EB6008B2F4F /* Helpers */,
+				0CF09B6D281D8E8E008B2F4F /* Model */,
+				0C98EAAA281D595200FC461E /* CoreData */,
 			);
 			path = InstabugNetworkClient;
 			sourceTree = "<group>";
@@ -311,7 +361,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C98EAAF281D599900FC461E /* CoreDataManager.swift in Sources */,
 				24AA93D925AF0F24007588C7 /* NetworkClient.swift in Sources */,
+				0CF09B6F281D8EA0008B2F4F /* InstabugModel.swift in Sources */,
+				0C98EAB1281D59B300FC461E /* NetworkLoggerManager.swift in Sources */,
+				0CF09B72281D8EC2008B2F4F /* Validator.swift in Sources */,
+				0CF09B75281D8ED8008B2F4F /* ErrorExtension.swift in Sources */,
+				0C98EAAD281D596100FC461E /* LoggerModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +706,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0C98EAAB281D596100FC461E /* LoggerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0C98EAAC281D596100FC461E /* LoggerModel.xcdatamodel */,
+			);
+			currentVersion = 0C98EAAC281D596100FC461E /* LoggerModel.xcdatamodel */;
+			path = LoggerModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 24AA939325AF0DA4007588C7 /* Project object */;
 }

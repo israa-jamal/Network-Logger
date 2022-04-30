@@ -10,7 +10,7 @@ import Foundation
 class Validator {
     
     class func validateLengthOf(text: String, withMaximum size: Size) -> Bool {
-        return text.count > size.length
+        return text.count <= size.length
     }
     
 }

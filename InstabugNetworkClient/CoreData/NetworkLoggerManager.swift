@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
- class NetworkLoggerManager {
+class NetworkLoggerManager {
     
     let recordsLimit: Int
     let payloadSizeLimit: Size
@@ -30,28 +30,31 @@ import CoreData
             deleteFirstRecord()
         }
         
-        let request = Request(context: backgroundContext)
-        request.url = url
-        request.method = method
-        request.payload = getPayloadWithRespectTo(size: payloadSizeLimit, payload)
-        
-        let response = Response(context: backgroundContext)
-        response.statusCode = statusCode ?? 0
-        response.payload = getPayloadWithRespectTo(size: payloadSizeLimit, responseBody)
-        
-        if let responseError = error {
-            let error = ResponseError(context: backgroundContext)
-            error.code = responseError.errorCode ?? 0
-            error.domain = responseError.errorDomain
-            response.error = error
+        backgroundContext.performAndWait {
+            let request = Request(context: backgroundContext)
+            request.url = url
+            request.method = method
+            request.payload = getPayloadWithRespectTo(size: payloadSizeLimit, payload)
+            
+            let response = Response(context: backgroundContext)
+            response.statusCode = statusCode ?? 0
+            response.payload = getPayloadWithRespectTo(size: payloadSizeLimit, responseBody)
+            
+            if let responseError = error {
+                let error = ResponseError(context: backgroundContext)
+                error.code = responseError.errorCode ?? 0
+                error.domain = responseError.errorDomain
+                response.error = error
+            }
+            
+            let record = Record(context: backgroundContext)
+            record.request = request
+            record.response = response
+            record.createdAt = Date()
         }
         
-        let record = Record(context: backgroundContext)
-        record.request = request
-        record.response = response
-        record.createdAt = Date()
-        
         writeToDataBase()
+
     }
     
     func writeToDataBase() {
@@ -81,23 +84,27 @@ import CoreData
     
     func deleteAllRecords() {
         let results = getRecordsFromBackGroundContext()
-        for result in results {
-            backgroundContext.delete(result)
-            do {
-                try backgroundContext.save()
-            } catch {
-                print("There Was an Error Deleting Records: \(error)")
+        backgroundContext.performAndWait {
+            for result in results {
+                backgroundContext.delete(result)
+                do {
+                    try backgroundContext.save()
+                } catch {
+                    print("There Was an Error Deleting Records: \(error)")
+                }
             }
         }
     }
     
     func deleteFirstRecord() {
-        if let result = getRecordsFromBackGroundContext().min(by: { $0.createdAt ?? Date() < $1.createdAt ?? Date()}) {
-            backgroundContext.delete(result)
-            do {
-                try backgroundContext.save()
-            } catch {
-                print("There Was an Error Deleting Record: \(error)")
+        backgroundContext.performAndWait {
+            if let result = getRecordsFromBackGroundContext().min(by: { $0.createdAt ?? Date() < $1.createdAt ?? Date()}) {
+                backgroundContext.delete(result)
+                do {
+                    try backgroundContext.save()
+                } catch {
+                    print("There Was an Error Deleting Record: \(error)")
+                }
             }
         }
     }
@@ -125,4 +132,4 @@ import CoreData
         
         return records
     }
- }
+}

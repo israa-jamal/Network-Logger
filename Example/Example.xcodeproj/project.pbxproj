@@ -15,28 +15,28 @@
 		0CF09BAB281DB240008B2F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF09BA9281DB240008B2F4F /* LaunchScreen.storyboard */; };
 		0CF09BD1281DB83E008B2F4F /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF09BCF281DB83E008B2F4F /* RecordTableViewCell.swift */; };
 		0CF09BD2281DB83E008B2F4F /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF09BD0281DB83E008B2F4F /* RecordTableViewCell.xib */; };
-		0CF09BE1281DBE30008B2F4F /* InstabugNetworkClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF09BDE281DBE29008B2F4F /* InstabugNetworkClient.framework */; };
-		0CF09BE2281DBE30008B2F4F /* InstabugNetworkClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF09BDE281DBE29008B2F4F /* InstabugNetworkClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0CFF06F5283111E50001C6CB /* InstabugNetworkClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFF06F2283111B90001C6CB /* InstabugNetworkClient.framework */; };
+		0CFF06F6283111E50001C6CB /* InstabugNetworkClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFF06F2283111B90001C6CB /* InstabugNetworkClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0CF09BDB281DBE29008B2F4F /* PBXContainerItemProxy */ = {
+		0CFF06EF283111B90001C6CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0CF09BD5281DBE29008B2F4F /* InstabugInterview.xcodeproj */;
+			containerPortal = 0CFF06E9283111B90001C6CB /* InstabugInterview.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 24AA939B25AF0DA4007588C7;
 			remoteInfo = InstabugInterview;
 		};
-		0CF09BDD281DBE29008B2F4F /* PBXContainerItemProxy */ = {
+		0CFF06F1283111B90001C6CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0CF09BD5281DBE29008B2F4F /* InstabugInterview.xcodeproj */;
+			containerPortal = 0CFF06E9283111B90001C6CB /* InstabugInterview.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 24AA93B825AF0F0D007588C7;
 			remoteInfo = InstabugNetworkClient;
 		};
-		0CF09BDF281DBE29008B2F4F /* PBXContainerItemProxy */ = {
+		0CFF06F3283111B90001C6CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0CF09BD5281DBE29008B2F4F /* InstabugInterview.xcodeproj */;
+			containerPortal = 0CFF06E9283111B90001C6CB /* InstabugInterview.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 24AA93C025AF0F0D007588C7;
 			remoteInfo = InstabugNetworkClientTests;
@@ -50,7 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0CF09BE2281DBE30008B2F4F /* InstabugNetworkClient.framework in Embed Frameworks */,
+				0CFF06F6283111E50001C6CB /* InstabugNetworkClient.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +68,7 @@
 		0CF09BAC281DB241008B2F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CF09BCF281DB83E008B2F4F /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		0CF09BD0281DB83E008B2F4F /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
-		0CF09BD5281DBE29008B2F4F /* InstabugInterview.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InstabugInterview.xcodeproj; path = "../../Downloads/InstabugInterview-2022/InstabugInterview.xcodeproj"; sourceTree = "<group>"; };
+		0CFF06E9283111B90001C6CB /* InstabugInterview.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InstabugInterview.xcodeproj; path = ../InstabugInterview.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CF09BE1281DBE30008B2F4F /* InstabugNetworkClient.framework in Frameworks */,
+				0CFF06F5283111E50001C6CB /* InstabugNetworkClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 		0CF09B92281DB23E008B2F4F = {
 			isa = PBXGroup;
 			children = (
-				0CF09BD5281DBE29008B2F4F /* InstabugInterview.xcodeproj */,
+				0CFF06E9283111B90001C6CB /* InstabugInterview.xcodeproj */,
 				0CF09B9D281DB23E008B2F4F /* Example */,
 				0CF09B9C281DB23E008B2F4F /* Products */,
 				0CF09BCB281DB4C6008B2F4F /* Frameworks */,
@@ -132,12 +132,12 @@
 			path = RecordTableViewCell;
 			sourceTree = "<group>";
 		};
-		0CF09BD6281DBE29008B2F4F /* Products */ = {
+		0CFF06EA283111B90001C6CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CF09BDC281DBE29008B2F4F /* InstabugInterview.app */,
-				0CF09BDE281DBE29008B2F4F /* InstabugNetworkClient.framework */,
-				0CF09BE0281DBE29008B2F4F /* InstabugNetworkClientTests.xctest */,
+				0CFF06F0283111B90001C6CB /* InstabugInterview.app */,
+				0CFF06F2283111B90001C6CB /* InstabugNetworkClient.framework */,
+				0CFF06F4283111B90001C6CB /* InstabugNetworkClientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,8 +190,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 0CF09BD6281DBE29008B2F4F /* Products */;
-					ProjectRef = 0CF09BD5281DBE29008B2F4F /* InstabugInterview.xcodeproj */;
+					ProductGroup = 0CFF06EA283111B90001C6CB /* Products */;
+					ProjectRef = 0CFF06E9283111B90001C6CB /* InstabugInterview.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -202,25 +202,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0CF09BDC281DBE29008B2F4F /* InstabugInterview.app */ = {
+		0CFF06F0283111B90001C6CB /* InstabugInterview.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = InstabugInterview.app;
-			remoteRef = 0CF09BDB281DBE29008B2F4F /* PBXContainerItemProxy */;
+			remoteRef = 0CFF06EF283111B90001C6CB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0CF09BDE281DBE29008B2F4F /* InstabugNetworkClient.framework */ = {
+		0CFF06F2283111B90001C6CB /* InstabugNetworkClient.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = InstabugNetworkClient.framework;
-			remoteRef = 0CF09BDD281DBE29008B2F4F /* PBXContainerItemProxy */;
+			remoteRef = 0CFF06F1283111B90001C6CB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0CF09BE0281DBE29008B2F4F /* InstabugNetworkClientTests.xctest */ = {
+		0CFF06F4283111B90001C6CB /* InstabugNetworkClientTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = InstabugNetworkClientTests.xctest;
-			remoteRef = 0CF09BDF281DBE29008B2F4F /* PBXContainerItemProxy */;
+			remoteRef = 0CFF06F3283111B90001C6CB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
